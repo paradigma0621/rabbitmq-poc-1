@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  rabbitmq-poc-1:
+    image: rabbitmq:3.10.5-management
+    container_name: rabbitmq-poc-1
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: 'guest'
+      RABBITMQ_DEFAULT_PASS: 'guest'
+    volumes:
+      - rabbitmq-poc-1_data:/var/lib/rabbitmq-poc-1/
+      - rabbitmq-poc-1_log:/var/lib/rabbitmq-poc-1/
+    ports:
+      - '15672:15672'
+      - '5672:5672'
+
+volumes:
+  rabbitmq-poc-1_data:
+  rabbitmq-poc-1_log:

@@ -1,8 +1,10 @@
 # RABBITMQ POC #1
 
-Using Java 21 with Spring Boot 3
+Using Java 21 and Spring Boot 3
 
-## Microservice Orders
-## Microservice Notification
+Start RabbitMQ from this folder: `docker compose up`
+
+## Orders Microservice
+## Notification Microservice
 
 
