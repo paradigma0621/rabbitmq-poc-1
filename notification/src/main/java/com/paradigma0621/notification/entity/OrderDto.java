@@ -1,8 +1,6 @@
 package com.paradigma0621.notification.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import com.paradigma0621.notification.entity.enums.StatusEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
