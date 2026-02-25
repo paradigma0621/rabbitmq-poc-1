@@ -1,13 +1,10 @@
-package com.paradigma0621.rabbitmqpoc1.entity;
+package com.paradigma0621.notification.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
-import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.annotation.Nulls;
-import com.paradigma0621.rabbitmqpoc1.entity.enums.StatusEnum;
+import com.paradigma0621.notification.entity.enums.StatusEnum;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
