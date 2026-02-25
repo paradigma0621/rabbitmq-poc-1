@@ -16,9 +16,11 @@ public class OrderListener {
 
    @RabbitListener(queues = "orders-created-notification")
     public void sendNotification(OrderDto orderDto) {
-       if (orderDto.getTotalAmount() > 999_999_999D)
+       if (orderDto.getTotalAmount() > 999_999_999D) {
+           log.error("Trying to process with error");
            throw new RuntimeException("Too expensive"); // Force an exception to simulate a system error
-                                                       // This will cause the message to be requeued indefinitely
+                                                        // This will cause the message to be requeued indefinitely
+       }
 
         emailService.sendEmail(orderDto);
         log.info("Created Notification: {}", orderDto);
