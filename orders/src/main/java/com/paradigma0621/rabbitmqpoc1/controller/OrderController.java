@@ -19,8 +19,7 @@ public class OrderController {
 
     private final OrderService service;
 
-    @PostMapping
-    @RequestMapping("/create")
+    @PostMapping("/create")
     public ResponseEntity<OrderDto> createOrder(@RequestBody OrderDto orderDto) {
         log.info("Order received: {}", orderDto.toString());
         orderDto = service.requestOrder(orderDto);
